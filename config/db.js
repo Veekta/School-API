@@ -1,5 +1,6 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
-const url = 'mongodb://localhost/Schools-In-Lagos'
+const url = process.env.LOCAL_DB
 
 mongoose.connect(url).then(()=>{
     console.log('connected')
